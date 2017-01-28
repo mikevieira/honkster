@@ -1,0 +1,27 @@
+<h1>Listing honks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @honks.each do |honk| %>
+      <tr>
+        <td><%= honk.content %></td>
+        <td><%= honk.user_id %></td>
+        <td><%= link_to 'Show', honk %></td>
+        <td><%= link_to 'Edit', edit_honk_path(honk) %></td>
+        <td><%= link_to 'Destroy', honk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Honk', new_honk_path %>

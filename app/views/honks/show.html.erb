@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @honk.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @honk.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_honk_path(@honk) %> |
+<%= link_to 'Back', honks_path %>
