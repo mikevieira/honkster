@@ -1,17 +1,38 @@
-<h1>Listing honks</h1>
 
-<table>
+<div class="hero">
+  <br />
+  <% @honks.each do |honk| %>
+  <div class="frosty col-xs-10 col-xs-offset-1 text-center">
+    <br />
+    <h2><%= honk.content %></h2>
+    <br />
+    <h4><%= honk.user_id %></h4>
+    <br />
+    <%= link_to 'Show', honk %>
+    <%= link_to 'Edit', edit_honk_path(honk) %>
+    <%= link_to 'Destroy', honk, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <br />
+    <br />
+    <hr/>
+  </div>
+  <% end %>
+    <br />
+    <br />
+</div>
+
+
+<!-- <table>
   <thead>
     <tr>
       <th>Content</th>
       <th>User</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> 
 
-  <tbody>
+  <tbody> 
     <% @honks.each do |honk| %>
-      <tr>
+      <tr class= "honk-box">
         <td><%= honk.content %></td>
         <td><%= honk.user_id %></td>
         <td><%= link_to 'Show', honk %></td>
@@ -19,9 +40,11 @@
         <td><%= link_to 'Destroy', honk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+ </tbody>
+</table> 
 
 <br>
 
 <%= link_to 'New Honk', new_honk_path %>
+<br/>
+<%= link_to 'Sign up for a Honks! account', new_user_path %> -->

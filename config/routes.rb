@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  root 'honks#index'
   resources :honks
 
   resources :users
